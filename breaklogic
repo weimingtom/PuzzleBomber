@@ -1,0 +1,22 @@
+for each column 
+	foreach row
+		if field[column][row] is counter gem then
+			check if x y is on a list
+				if x and y is NOT on the list
+					put x and y on the list
+					breakgem(x+1,y,color);
+					breakgem(x-1,y,color);
+					breakgem(x,y+1,color);
+					breakgem(x,y-1,color);
+
+
+
+int breakgem(x,y, color)
+{
+	if (field[column][row] is counter gem and is the same color or if gem is the same color)
+		if x and y is NOT on the list 
+			put x y on the list
+				breakgem(x+1,y,color);
+				breakgem(x-1,y,color);
+				breakgem(x,y+1,color);
+				breakgem(x,y-1,color);

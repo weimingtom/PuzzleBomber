@@ -1,0 +1,25 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#include "loadingscreen.h"
+
+
+Engine* engine=NULL;
+int SCREEN_WIDTH=800;
+int SCREEN_HEIGHT=600;
+const int FIELD_WIDTH=6;
+const int FIELD_HEIGHT=13;
+
+char TITLE[255] = "Puzzler Bomber";
+bool quit=false;
+
+int main_menu_mode=0;
+int field[FIELD_WIDTH+2][FIELD_HEIGHT+4];
+
+enum { LOADING_SCREEN,TITLE_SCREEN,GAME_SCREEN,SELECT_MODE,OPITION_SCREEN };
+
+int init_engine();
+int clean_up();
+int main_loop();
+
+#endif
